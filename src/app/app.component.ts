@@ -15,6 +15,7 @@ interface Person {
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'angular_jsonsort';
   people: Person[] = [
@@ -24,9 +25,12 @@ export class AppComponent {
     {"first_name": "Emma", "last_name": "Brown"},
     {"first_name": "Michael", "last_name": "Davis"}
   ];
+  originalPeople!: Person[];
 
   ngOnInit() {
+    this.originalPeople = [...this.people];
     this.sortPeopleByLastName();
+
   }
 
   sortPeopleByLastName() {
