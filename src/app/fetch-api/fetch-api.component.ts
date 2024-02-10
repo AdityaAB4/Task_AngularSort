@@ -21,12 +21,9 @@ export class FetchApiComponent implements OnInit {
   fetchAndSortUserData() {
     this.apiService.fetchUsers().subscribe(users => {
       this.users = users.sort((a, b) => {
-        const firstNameComparison = a.name.first.localeCompare(b.name.first);
-        if (firstNameComparison !== 0) {
-          return firstNameComparison;
-        }
         return a.name.last.localeCompare(b.name.last);
       });
     });
   }
 }
+
