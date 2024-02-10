@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgModel, NgModelGroup } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { FetchApiComponent } from './fetch-api/fetch-api.component';
+import { HttpClient } from '@angular/common/http';
 
 interface Person {
   first_name: string;
@@ -11,7 +13,7 @@ interface Person {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule],
+  imports: [RouterOutlet,CommonModule,FetchApiComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
