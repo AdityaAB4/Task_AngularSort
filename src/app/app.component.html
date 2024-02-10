@@ -5,16 +5,11 @@
       {{ person.first_name }} {{ person.last_name }},
     </li>
   </ul>
+  <hr />
   <h2>Sorted People:</h2>
   <ul>
     <li *ngFor="let person of people">
       {{ person.first_name }} {{ person.last_name }},
     </li>
   </ul>
-  <br />
-  <br />
-  <br />
-  <hr />
-
-  <app-fetch-api></app-fetch-api>
 </router-outlet>
